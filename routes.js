@@ -7,7 +7,7 @@ ParserCustomizer.customize(Parser);
 
 router.route('/').get((req, res) => {
     res.json({
-        message: 'Welcome to 🚀mercury-parser-api API! Endpoint: /parser',
+        message: 'Savvynci is ready to serve 🚀',
     });
 });
 
