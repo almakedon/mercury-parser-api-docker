@@ -12,6 +12,13 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/parser').get(async (req, res) => {
+    const passcode = req.query.passcode;
+    if (!passcode || passcode !== '$avvYnC!A!@$$!$t@nt') {
+        return res.json({
+            message: 'Nice try boddy!',
+        });
+    }
+    
     let result = { message: 'No URL was provided' };
     if (req.query.url) {
         try {
