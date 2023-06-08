@@ -15,7 +15,7 @@ router.route('/parser').get(async (req, res) => {
     let result = { message: 'No URL was provided' };
     if (req.query.url) {
         try {
-            const contentType = req.query.contentType || 'html';
+            const contentType = req.query.contentType || 'text';
             let headers = new Object();
             if (typeof req.query.headers !== 'undefined') {
                 headers = JSON.parse(req.query.headers);
